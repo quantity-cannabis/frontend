@@ -1,20 +1,32 @@
 .root {
-  @apply sticky top-0 bg-primary z-40 transition-all duration-150;
-  min-height: 74px;
+  @apply fixed bg-primary z-40 transition-all duration-150;
+  width: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+  padding-left: 0.35rem;
 }
 
 .nav {
-  @apply relative flex flex-row justify-between py-4 md:py-4;
+  @apply relative flex flex-row justify-between;
+  padding: 1.5rem 0;
 }
 
 .navMenu {
-  @apply hidden ml-6 space-x-4 lg:block;
+  @apply hidden ml-10 space-x-4 lg:block;
 }
 
 .link {
   @apply inline-flex items-center leading-6
   transition ease-in-out duration-75 cursor-pointer
-  text-accent-5;
+  text-accent-9;
+  font-weight: 500;
+  font-size: 0.65rem;
+  margin-left: 30px !important;
+  margin-right: 0 !important;
+
+  &:first-child {
+    margin-left: 0 !important;
+  }
 }
 
 .link:hover {
@@ -26,10 +38,5 @@
 }
 
 .logo {
-  @apply cursor-pointer rounded-full border transform duration-100 ease-in-out;
-
-  &:hover {
-    @apply shadow-md;
-    transform: scale(1.05);
-  }
+  @apply cursor-pointer transform duration-100 ease-in-out;
 }

@@ -9,12 +9,7 @@ interface GridProps {
   variant?: 'default' | 'filled'
 }
 
-const Grid: FC<GridProps> = ({
-  className,
-  layout = 'A',
-  children,
-  variant = 'default',
-}) => {
+const Grid: FC<GridProps> = ({ className, layout, children, variant }) => {
   const rootClassName = cn(
     s.root,
     {

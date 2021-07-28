@@ -96,7 +96,7 @@ const Layout: FC<Props> = ({
 }) => {
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
-  const navBarlinks = categories.slice(0, 2).map((c) => ({
+  const navBarlinks = categories.slice(0, 7).map((c) => ({
     label: c.name,
     href: `/search/${c.slug}`,
   }))
@@ -106,7 +106,7 @@ const Layout: FC<Props> = ({
       <div className={cn(s.root)}>
         <Navbar links={navBarlinks} />
         <main className="fit">{children}</main>
-        <Footer pages={pageProps.pages} />
+        {/* <Footer pages={pageProps.pages} /> */}
         <ModalUI />
         <SidebarUI />
         <FeatureBar

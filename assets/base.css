@@ -39,6 +39,8 @@
 
   --font-sans: -apple-system, system-ui, BlinkMacSystemFont, 'Helvetica Neue',
     'Helvetica', sans-serif;
+
+  --font-google: 'Lexend', sans-serif;
 }
 
 [data-theme='dark'] {
@@ -81,11 +83,12 @@ html {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
 }
 
 html,
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-google) !important;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

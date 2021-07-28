@@ -13,11 +13,13 @@
 }
 
 .sliderContainer {
-  @apply flex items-center justify-center overflow-x-hidden bg-violet;
+  @apply flex items-center justify-center overflow-x-hidden;
+  background-color: var(--accent-1);
 }
 
 .imageContainer {
   @apply text-center;
+  background-color: var(--accent-1);
 }
 
 .imageContainer > div,
@@ -27,6 +29,7 @@
 
 .sliderContainer .img {
   @apply w-full h-auto max-h-full object-cover;
+  mix-blend-mode: darken;
 }
 
 .button {

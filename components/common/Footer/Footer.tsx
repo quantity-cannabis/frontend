@@ -8,6 +8,7 @@ import { Github, Vercel } from '@components/icons'
 import { Logo, Container } from '@components/ui'
 import { I18nWidget } from '@components/common'
 import s from './Footer.module.css'
+import Quantity from '@components/icons/Quantity'
 
 interface Props {
   className?: string
@@ -68,7 +69,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
         </div>
         <div className="pt-6 pb-10 flex flex-col md:flex-row justify-between items-center space-y-4 text-accent-6 text-sm">
           <div>
-            <span>&copy; 2020 ACME, Inc. All rights reserved.</span>
+            <span>&copy; 2021 Quantity All rights reserved.</span>
           </div>
           <div className="flex items-center text-primary text-sm">
             <span className="text-primary">Created by</span>
@@ -79,7 +80,7 @@ const Footer: FC<Props> = ({ className, pages }) => {
               target="_blank"
               className="text-primary"
             >
-              <Vercel
+              <Quantity
                 className="inline-block h-6 ml-3 text-primary"
                 alt="Vercel.com Logo"
               />

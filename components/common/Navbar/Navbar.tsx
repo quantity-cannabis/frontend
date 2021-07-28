@@ -17,7 +17,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
   <NavbarRoot>
     <Container>
       <div className={s.nav}>
-        <div className="flex items-center flex-1">
+        <div className="flex items-center">
           <Link href="/">
             <a className={s.logo} aria-label="Logo">
               <Logo />
@@ -25,7 +25,7 @@ const Navbar: FC<NavbarProps> = ({ links }) => (
           </Link>
           <nav className={s.navMenu}>
             <Link href="/search">
-              <a className={s.link}>All</a>
+              <a className={s.link}>View All</a>
             </Link>
             {links?.map((l) => (
               <Link href={l.href} key={l.href}>

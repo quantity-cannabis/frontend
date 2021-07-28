@@ -18,6 +18,11 @@
   cursor-pointer h-full;
   width: 125px;
   width: calc(100% / 3);
+  background-color: var(--accent-2);
+}
+
+.thumb > div {
+  display: block !important;
 }
 
 .thumb.selected {
@@ -26,18 +31,20 @@
 
 .thumb img {
   height: 85% !important;
+  mix-blend-mode: darken;
+  @apply transform transition-transform duration-500;
 }
 
 .album {
   width: 100%;
   height: 100%;
-  @apply bg-violet-dark;
   box-sizing: content-box;
   overflow-y: hidden;
   overflow-x: auto;
   white-space: nowrap;
   height: 125px;
   scrollbar-width: none;
+  background-color: var(--accent-2);
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -46,9 +53,8 @@
 }
 
 @screen md {
-  .thumb:hover {
-    transform: scale(1.02);
-    background-color: rgba(255, 255, 255, 0.08);
+  .thumb:hover img {
+    transform: scale(1.025);
   }
 
   .thumb.selected {
