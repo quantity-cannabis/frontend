@@ -1,7 +1,7 @@
 import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
-import { Heading, Grid, Marquee, Hero } from '@components/ui'
+import { Intro, Heading, Grid, Marquee, Hero } from '@components/ui'
 // import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
@@ -41,6 +41,20 @@ export default function Home({
   return (
     <>
       <Heading>Our favorite products</Heading>
+
+      <Grid layout="normal" variant="filled">
+        {products.slice(0, 3).map((product: any, i: number) => (
+          <ProductCard
+            key={product.id}
+            product={product}
+            imgProps={{
+              width: i === 0 ? 1080 : 540,
+              height: i === 0 ? 1080 : 540,
+            }}
+          />
+        ))}
+      </Grid>
+
       <Grid layout="normal" variant="filled">
         {products.slice(0, 3).map((product: any, i: number) => (
           <ProductCard

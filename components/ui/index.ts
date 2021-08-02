@@ -1,4 +1,5 @@
 export { default as Hero } from './Hero'
+export { default as Intro } from './Intro'
 export { default as Logo } from './Logo'
 export { default as Heading } from './Heading'
 export { default as Grid } from './Grid'

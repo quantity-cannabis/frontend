@@ -6,7 +6,7 @@
       "vendor": "Next.js",
       "path": "/gelato-flower",
       "slug": "gelato-flower",
-      "price": { "value": 29, "currencyCode": "USD" },
+      "price": { "value": 34, "currencyCode": "USD" },
       "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
       "images": [
         {
@@ -56,12 +56,6 @@
           "values": [
             {
               "label": "S"
-            },
-            {
-              "label": "M"
-            },
-            {
-              "label": "L"
             }
           ]
         }
@@ -73,7 +67,7 @@
       "vendor": "Next.js",
       "path": "/sour-gummies",
       "slug": "sour-gummies",
-      "price": { "value": 20, "currencyCode": "USD" },
+      "price": { "value": 32, "currencyCode": "USD" },
       "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
       "images": [
         {
@@ -140,7 +134,7 @@
       "vendor": "Next.js",
       "path": "/blue-dream-flower",
       "slug": "blue-dream-flower",
-      "price": { "value": 29, "currencyCode": "USD" },
+      "price": { "value": 36, "currencyCode": "USD" },
       "descriptionHtml": "<p><span>Show off your love for Next.js and Vercel with this unique,&nbsp;</span><strong>limited edition</strong><span>&nbsp;t-shirt. This design is part of a limited run, numbered drop at the June 2021 Next.js Conf. It features a unique, handcrafted triangle design. Get it while supplies last – only 200 of these shirts will be made!&nbsp;</span><strong>All proceeds will be donated to charity.</strong></p>",
       "images": [
         {

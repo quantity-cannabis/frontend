@@ -1,14 +1,14 @@
 .root {
-  @apply fixed bg-primary z-40 transition-all duration-150;
+  @apply fixed z-40 transition-all duration-150;
   width: calc(100% - 20px);
   top: 10px;
   left: 10px;
-  padding-left: 0.35rem;
+  border: 1px solid transparent;
 }
 
 .nav {
   @apply relative flex flex-row justify-between;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .navMenu {
@@ -17,8 +17,8 @@
 
 .link {
   @apply inline-flex items-center leading-6
-  transition ease-in-out duration-75 cursor-pointer
-  text-accent-9;
+  transition ease-in-out duration-75 cursor-pointer;
+  color: #fff;
   font-weight: 500;
   font-size: 0.65rem;
   margin-left: 30px !important;
@@ -30,7 +30,7 @@
 }
 
 .link:hover {
-  @apply text-accent-9;
+  color: #fff;
 }
 
 .link:focus {
@@ -39,4 +39,11 @@
 
 .logo {
   @apply cursor-pointer transform duration-100 ease-in-out;
+  position: relative;
+  top: 1px;
+}
+
+.logo path {
+  fill: #fff;
+  @apply transition ease-in-out duration-75;
 }

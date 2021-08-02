@@ -1,0 +1,36 @@
+.root {
+  @apply flex flex-row;
+  justify-content: flex-end;
+  height: 100vh;
+}
+
+.left {
+  width: 73%;
+  background-image: url('https://cannabisnow.com/wp-content/uploads/2018/08/justincannabisblackshaman.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.right {
+  width: 27%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 0 2rem;
+}
+
+.subheadline {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: 10px 0 10px;
+}
+
+.description {
+  font-size: 0.8rem;
+}

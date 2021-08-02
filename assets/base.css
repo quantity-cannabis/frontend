@@ -41,6 +41,7 @@
     'Helvetica', sans-serif;
 
   --font-google: 'Lexend', sans-serif;
+  --font-webfont: 'Suisse Intl', sans-serif;
 }
 
 [data-theme='dark'] {
@@ -95,6 +96,7 @@ body {
   background-color: var(--primary);
   color: var(--text-primary);
   overscroll-behavior-x: none;
+  letter-spacing: -0.015rem;
 }
 
 body {

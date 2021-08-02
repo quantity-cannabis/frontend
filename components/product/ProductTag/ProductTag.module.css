@@ -8,13 +8,26 @@
   line-height: 0;
 }
 
+.root .name span:nth-of-type(1) {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.475rem;
+  padding: 25px 0 0;
+}
+
 .root .name span {
   @apply pt-3 pr-3 bg-primary text-primary font-medium;
   font-size: 0.85rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   display: block;
-  padding: 25px 0 7.5px;
+  padding: 20px 0 7.5px;
+}
+
+.root .name span:nth-of-type(3) {
+  font-weight: normal;
+  font-size: 0.6rem;
+  padding: 19px 0 8px;
 }
 
 .root .name span.fontsizing {
@@ -25,4 +38,8 @@
 .root .price {
   @apply pr-3 pb-3 text-xs bg-primary text-accent-9
   inline-block tracking-wide;
+}
+
+.root .price u {
+  text-decoration: line-through;
 }
