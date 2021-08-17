@@ -1,5 +1,4 @@
 import React, { FC } from 'react'
-import { ArrowRight } from '@components/icons'
 import s from './Intro.module.css'
 import Link from 'next/link'
 interface IntroProps {
@@ -18,7 +17,7 @@ const Intro: FC<IntroProps> = ({ subheadline, headline, description }) => {
         <h2 className={s.title}>{headline}</h2>
         <div className={s.description}>
           <p>{description}</p>
-          <Link href="/">
+          <Link href="/search">
             <a className="shop-btn">Shop Now</a>
           </Link>
         </div>

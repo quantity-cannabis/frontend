@@ -1,9 +1,9 @@
 import s from './ProductSidebar.module.css'
 import { useAddItem } from '@framework/cart'
 import { FC, useEffect, useState } from 'react'
-import { ProductOptions } from '@components/product'
 import type { Product } from '@commerce/types/product'
-import { Button, Text, Rating, Collapse, useUI } from '@components/ui'
+import ProductTag from '../ProductTag'
+import { Button, Text, Rating, useUI } from '@components/ui'
 import {
   getProductVariant,
   selectDefaultOptionFromProduct,
@@ -42,19 +42,15 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
 
   return (
     <div className={className}>
-      <ProductOptions
-        options={product.options}
-        selectedOptions={selectedOptions}
-        setSelectedOptions={setSelectedOptions}
-      />
+      <ProductTag className="productCard" name={product.name} price="34.00" />
       <Text
         className="pb-4 break-words w-full max-w-xl"
         html={product.descriptionHtml || product.description}
       />
-      <div className="flex flex-row justify-between items-center">
+      {/* <div className="flex flex-row justify-between items-center">
         <Rating value={4} />
         <div className="text-accent-6 pr-1 font-medium text-sm">36 reviews</div>
-      </div>
+      </div> */}
       <div>
         {process.env.COMMERCE_CART_ENABLED && (
           <Button
@@ -70,17 +66,6 @@ const ProductSidebar: FC<ProductSidebarProps> = ({ product, className }) => {
               : 'Add To Cart'}
           </Button>
         )}
-      </div>
-      <div className="mt-6">
-        <Collapse title="Care">
-          This is a limited edition production run. Printing starts when the
-          drop ends.
-        </Collapse>
-        <Collapse title="Details">
-          This is a limited edition production run. Printing starts when the
-          drop ends. Reminder: Bad Boys For Life. Shipping may take 10+ days due
-          to COVID-19.
-        </Collapse>
       </div>
     </div>
   )

@@ -8,10 +8,13 @@
 
 .header .label {
   @apply text-base font-medium;
+  font-size: 0.85rem;
 }
 
 .content {
   @apply pt-3 overflow-hidden pl-8;
+  margin-left: auto;
+  font-size: 0.75rem;
 }
 
 .icon {

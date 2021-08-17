@@ -1,5 +1,6 @@
 .root {
   @apply border-t border-accent-2;
+  display: none;
 }
 
 .link {

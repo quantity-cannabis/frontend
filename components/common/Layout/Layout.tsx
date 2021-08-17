@@ -96,6 +96,8 @@ const Layout: FC<Props> = ({
 }) => {
   const { acceptedCookies, onAcceptCookies } = useAcceptCookies()
   const { locale = 'en-US' } = useRouter()
+  const { query } = useRouter()
+  const [pageName] = query?.slug ?? []
   const navBarlinks = categories.slice(0, 7).map((c) => ({
     label: c.name,
     href: `/search/${c.slug}`,
@@ -103,7 +105,7 @@ const Layout: FC<Props> = ({
 
   return (
     <CommerceProvider locale={locale}>
-      <div className={cn(s.root)}>
+      <div className={cn(s.root)} id={pageName}>
         <Navbar links={navBarlinks} />
         <main className="fit">{children}</main>
         <Footer pages={pageProps.pages} />

@@ -1,20 +1,33 @@
 .root {
-  @apply relative grid items-start gap-1 grid-cols-1 overflow-x-hidden;
+  @apply overflow-x-hidden;
   min-height: auto;
+  padding-top: calc(4.25rem + 10px);
+  position: relative;
 }
 
 .main {
-  @apply relative px-0 pb-0 box-border  flex flex-col col-span-1;
-  min-height: 500px;
+  @apply relative px-0 pb-0 box-border;
+  min-height: 700px;
+  background-color: var(--accent-1);
 }
 
 .sidebar {
-  @apply flex flex-col col-span-1 mx-auto max-w-8xl px-6 py-6 w-full h-full;
+  position: absolute;
+  top: 0;
+  width: 395px;
+  right: 10%;
+  top: 4.25rem;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+  padding: 38px !important;
+  height: 441px;
 }
 
 .sliderContainer {
-  @apply flex items-center justify-center overflow-x-hidden;
+  @apply items-center justify-center overflow-x-hidden;
   background-color: var(--accent-1);
+  padding-right: 10%;
 }
 
 .imageContainer {

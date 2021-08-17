@@ -1,5 +1,6 @@
 .body {
-  @apply text-base leading-7 max-w-6xl mx-auto;
+  @apply text-base leading-5 max-w-6xl mx-auto;
+  font-size: 0.75rem;
 }
 
 .heading {
@@ -11,5 +12,8 @@
 }
 
 .sectionHeading {
-  @apply pt-1 pb-2 text-2xl font-bold tracking-wide cursor-pointer mb-2;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  padding-bottom: 10px;
 }

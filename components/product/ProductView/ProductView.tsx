@@ -6,10 +6,9 @@ import { FC } from 'react'
 import type { Product } from '@commerce/types/product'
 import usePrice from '@framework/product/use-price'
 import { WishlistButton } from '@components/wishlist'
-import { ProductSlider, ProductCard } from '@components/product'
-import { Container, Text } from '@components/ui'
+import { ProductSlider, ProductFAQs } from '@components/product'
+import { Container, Wrapper, Text, Collapse } from '@components/ui'
 import ProductSidebar from '../ProductSidebar'
-import ProductTag from '../ProductTag'
 interface ProductViewProps {
   product: Product
   relatedProducts: Product[]
@@ -55,30 +54,40 @@ const ProductView: FC<ProductViewProps> = ({ product, relatedProducts }) => {
 
           <ProductSidebar product={product} className={s.sidebar} />
         </div>
-        <hr className="mt-7 border-accent-2" />
-        <section className="py-12 px-6 mb-10">
-          <Text variant="sectionHeading">Related Products</Text>
-          <div className={s.relatedProductsGrid}>
-            {relatedProducts.map((p) => (
-              <div
-                key={p.path}
-                className="animated fadeIn bg-accent-0 border border-accent-2"
-              >
-                <ProductCard
-                  noNameTag
-                  product={p}
-                  key={p.path}
-                  variant="simple"
-                  className="animated fadeIn"
-                  imgProps={{
-                    width: 300,
-                    height: 300,
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+
+        <Wrapper>
+          <ProductFAQs>
+            <Text variant="sectionHeading">FAQs</Text>
+            <Collapse title="Lorem ipsum dolor sit amet?">
+              Consectetur adipiscing elit. Nullam tincidunt ultrices
+              ullamcorper. Morbi iaculis purus et neque blandit porta. Cras id
+              euismod est. Aenean at quam volutpat, euismod lorem ac, aliquet
+              leo. Cras ut viverra tellus. Donec commodo velit vel tellus rutrum
+              convallis. Nunc dapibus nisi quis purus condimentum mollis.
+            </Collapse>
+            <Collapse title="Donec commodo velit vel rutrum convalli?">
+              Lorem ipsum dolor sit amet. Nullam tincidunt ultrices ullamcorper.
+              Morbi iaculis purus et neque blandit porta. Cras id euismod est.
+              Aenean at quam volutpat, euismod lorem ac, aliquet leo. Cras ut
+              viverra tellus. Donec commodo velit vel tellus rutrum convallis.
+              Nunc dapibus nisi quis purus condimentum mollis.
+            </Collapse>
+            <Collapse title="Consectetur adip iscing elit ultrices?">
+              Lorem ipsum dolor sit amet. Nullam tincidunt ultrices ullamcorper.
+              Morbi iaculis purus et neque blandit porta. Cras id euismod est.
+              Aenean at quam volutpat, euismod lorem ac, aliquet leo. Cras ut
+              viverra tellus. Donec commodo velit vel tellus rutrum convallis.
+              Nunc dapibus nisi quis purus condimentum mollis.
+            </Collapse>
+            <Collapse title="Cras ut viverra tellus. Donec commodo?">
+              Consectetur adipiscing elit. Nullam tincidunt ultrices
+              ullamcorper. Morbi iaculis purus et neque blandit porta. Cras id
+              euismod est. Aenean at quam volutpat, euismod lorem ac, aliquet
+              leo. Cras ut viverra tellus. Donec commodo velit vel tellus rutrum
+              convallis. Nunc dapibus nisi quis purus condimentum mollis.
+            </Collapse>
+          </ProductFAQs>
+        </Wrapper>
       </Container>
       <NextSeo
         title={product.name}
